@@ -1,4 +1,3 @@
-# Load the MNIST dataset using OpenML
 from sklearn.datasets import fetch_openml
 from sklearn.decomposition import PCA, IncrementalPCA
 import matplotlib.pyplot as plt
@@ -6,7 +5,7 @@ import matplotlib.pyplot as plt
 
 #Question1: 
 
-#Retrieve and load mnist_784 dataset
+#load mnist_784 dataset
 mnist_data = fetch_openml('mnist_784', version=1, as_frame=False)
 features = mnist_data.data
 print(f"Shape of MNIST data: {mnist_data.data.shape}")  
