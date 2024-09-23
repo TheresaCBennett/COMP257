@@ -3,6 +3,7 @@ from sklearn.datasets import fetch_openml
 from sklearn.decomposition import PCA, IncrementalPCA
 import matplotlib.pyplot as plt
 
+
 #Question1: 
 
 #Retrieve and load mnist_784 dataset
