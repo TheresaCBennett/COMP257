@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.decomposition import PCA
 import tensorflow as tf
-from tensorflow.keras import layers, regularizers
+from tensorflow.keras import layers, regularizers # type: ignore
 from sklearn.model_selection import KFold
 import numpy as np
 import matplotlib.pyplot as plt
@@ -71,8 +71,8 @@ for lr in learning_rates:
 
 # Perform k-fold cross-validation
         for fold_idx, (train_index, val_index) in enumerate(kf.split(X_train_pca)):
-            print(f"Training fold {fold_idx + 1} with lr={lr}, reg={reg}")  # Track progress
-            
+            print(f"Training fold {fold_idx + 1} with lr={lr}, reg={reg}")  
+
 # Split the data into training and validation for this fold
             X_fold_train, X_fold_val = X_train_pca[train_index], X_train_pca[val_index]
             y_fold_train, y_fold_val = y_train[train_index], y_train[val_index]
